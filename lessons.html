@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Lessons from Reliance — eCoding India</title>
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <style>
+    .lessons-container { max-width: 900px; margin: 0 auto; }
+    .lesson-full { margin-bottom: 80px; scroll-margin-top: 80px; }
+    .lesson-full:last-child { margin-bottom: 0; }
+    .lesson-header {
+      display: flex; align-items: flex-start; gap: 32px;
+      padding-bottom: 32px; border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    .l-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 6rem; color: rgba(201,168,76,0.15);
+      line-height: 1; flex-shrink: 0; width: 100px; text-align: right;
+    }
+    .lesson-full h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900; line-height: 1.2; margin-bottom: 12px;
+    }
+    .l-tagline {
+      font-size: 1rem; color: var(--gold); font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
+    .lesson-body-text { font-size: 1rem; line-height: 1.85; color: #333; margin-bottom: 24px; }
+    .lesson-bullets { list-style: none; margin: 24px 0; }
+    .lesson-bullets li {
+      padding: 12px 0 12px 28px; position: relative;
+      font-size: 0.95rem; color: var(--muted); line-height: 1.6;
+      border-bottom: 1px solid var(--border);
+    }
+    .lesson-bullets li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--gold); font-weight: 600;
+    }
+    .lesson-callout {
+      background: var(--ink); color: var(--cream);
+      padding: 32px 36px; margin: 32px 0;
+      border-left: 4px solid var(--gold);
+    }
+    .lesson-callout p { font-size: 1.05rem; line-height: 1.7; font-style: italic; }
+    .lesson-callout cite { display: block; margin-top: 12px; font-size: 0.8rem; color: var(--gold); letter-spacing: 1px; font-style: normal; }
+    .lesson-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .l-tag { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); }
+
+    .progress-bar { position: fixed; top: 64px; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.05); z-index: 99; }
+    .progress-fill { height: 100%; background: var(--gold); width: 0%; transition: width .1s; }
+
+    .nav-lessons { position: sticky; top: 64px; background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 80px; z-index: 50; display: flex; gap: 0; overflow-x: auto; }
+    .nav-lessons a { padding: 16px 20px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: all .2s; }
+    .nav-lessons a:hover { color: var(--ink); border-color: var(--gold); }
+    .nav-lessons a.active { color: var(--ink); border-color: var(--gold); }
+    @media(max-width:900px) { .l-num { font-size: 4rem; width: 70px; } .nav-lessons { padding: 0 20px; } }
+  </style>
+</head>
+<body>
+<div id="nav-holder"></div>
+
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg">LESSONS</div>
+  <div>
+    <div class="page-tag fade-up">7 Core Principles</div>
+    <h1 class="page-title fade-up delay-1">What Reliance<br><em>Teaches</em> Us</h1>
+    <p class="page-sub fade-up delay-2">Seven hard-earned lessons from India's most powerful business empire — applicable to any builder, founder, or strategist.</p>
+  </div>
+</div>
+
+<!-- LESSON SUBNAV -->
+<nav class="nav-lessons" id="lesson-subnav">
+  <a href="#lesson-1">01 Scale</a>
+  <a href="#lesson-2">02 Infrastructure</a>
+  <a href="#lesson-3">03 Ecosystems</a>
+  <a href="#lesson-4">04 Speed</a>
+  <a href="#lesson-5">05 Capital</a>
+  <a href="#lesson-6">06 Long-Term</a>
+  <a href="#lesson-7">07 Behavior</a>
+</nav>
+
+<section>
+  <div class="lessons-container">
+
+    <!-- LESSON 1 -->
+    <div class="lesson-full reveal" id="lesson-1">
+      <div class="lesson-header">
+        <div class="l-num">01</div>
+        <div>
+          <h2>Think Beyond Your Current Size</h2>
+          <div class="l-tagline">"Most businesses grow into scale. Reliance was designed for it."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">When Dhirubhai Ambani started his textile business in 1966, he wasn't thinking about how to survive year one. He was thinking about owning the entire value chain — from raw material to finished goods. This was radical for any Indian business of that era.</p>
+      <p class="lesson-body-text">He built the Naroda textile plant not to match competitors, but to become the cost-efficient manufacturer they couldn't compete with. Every capital investment was sized three steps ahead of where the company actually was.</p>
+      <div class="lesson-callout">
+        <p>The instinct to be "realistic" about your size is often just fear disguised as prudence. Reliance's founding thesis was: if we build for the India of 2010 today, in 2010 we'll be the only one ready.</p>
+        <cite>— Lesson from the Reliance Playbook</cite>
+      </div>
+      <p class="lesson-body-text">What makes this lesson difficult to apply is that scaling before your revenue justifies it requires deep access to capital and extraordinary conviction. Reliance had both — but it also built both deliberately. The lesson isn't just "think big" — it's build the financial muscle to execute a big vision.</p>
+      <ul class="lesson-bullets">
+        <li>Design your processes, systems and culture for 10x your current size</li>
+        <li>Hire for the company you are becoming, not the company you are today</li>
+        <li>Capital investment decisions should reflect future competitive position, not current revenue</li>
+        <li>Infrastructure spending looks wasteful until it doesn't</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">Scale</span>
+        <span class="l-tag">Vision</span>
+        <span class="l-tag">Infrastructure</span>
+        <span class="l-tag">Capital Allocation</span>
+      </div>
+    </div>
+
+    <!-- LESSON 2 -->
+    <div class="lesson-full reveal" id="lesson-2">
+      <div class="lesson-header">
+        <div class="l-num">02</div>
+        <div>
+          <h2>Infrastructure Creates Long-Term Power</h2>
+          <div class="l-tagline">"Apps can be copied. Refineries cannot."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">In the digital economy, it's tempting to believe that software is the only moat. Reliance's history is a direct rebuttal. The Jamnagar Refinery, the Jio fiber network, the cold-chain logistics network for retail — these physical systems took years and billions to build, and they are virtually irreplaceable.</p>
+      <p class="lesson-body-text">Jio's real competitive advantage was never the app. It was the 1.2 million km of optical fiber buried in the ground across India. A competitor can clone your UI in six months. They cannot clone your network in ten years.</p>
+      <div class="lesson-callout">
+        <p>Infrastructure compounds quietly. The first few years it looks like a money pit. By year ten it looks like a wall no one can climb over.</p>
+        <cite>— Infrastructure as Moat</cite>
+      </div>
+      <ul class="lesson-bullets">
+        <li>Physical infrastructure — networks, warehouses, refineries — creates durable competitive advantage</li>
+        <li>The hardest assets to build are the ones most worth building</li>
+        <li>Distribution systems are often more defensible than products</li>
+        <li>Supply chains, once optimized, become cost advantages competitors can never match</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">Moat</span>
+        <span class="l-tag">Networks</span>
+        <span class="l-tag">Distribution</span>
+        <span class="l-tag">Long Game</span>
+      </div>
+    </div>
+
+    <!-- LESSON 3 -->
+    <div class="lesson-full reveal" id="lesson-3">
+      <div class="lesson-header">
+        <div class="l-num">03</div>
+        <div>
+          <h2>Ecosystems Beat Individual Products</h2>
+          <div class="l-tagline">"Together, they are unstoppable."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">Jio gave India cheap data. Reliance Retail gave them physical stores in every town. JioMart gave them e-commerce. JioCinema gave them streaming. Each piece alone is significant. Together, they create a flywheel that is almost impossible to exit from as a consumer.</p>
+      <p class="lesson-body-text">This is the Amazon playbook, the Apple playbook, and the Alibaba playbook — applied to India's specific infrastructure reality. Mukesh Ambani understood that in a price-sensitive, low-trust market, the winner wouldn't be the company with the best product. It would be the company whose ecosystem you couldn't leave.</p>
+      <div class="lesson-callout">
+        <p>The question Reliance asks is not "how do we build a great product?" but "how do we build a system where every product makes every other product more valuable?"</p>
+        <cite>— Ecosystem Strategy</cite>
+      </div>
+      <ul class="lesson-bullets">
+        <li>Build products that reinforce each other, not products that standalone</li>
+        <li>The more a user uses your ecosystem, the harder it becomes to leave</li>
+        <li>Cross-subsidization: use profit from one product to drive adoption in another</li>
+        <li>Platforms outcompete point solutions every time at scale</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">Platform</span>
+        <span class="l-tag">Flywheel</span>
+        <span class="l-tag">Lock-In</span>
+        <span class="l-tag">Network Effects</span>
+      </div>
+    </div>
+
+    <!-- LESSON 4 -->
+    <div class="lesson-full reveal" id="lesson-4">
+      <div class="lesson-header">
+        <div class="l-num">04</div>
+        <div>
+          <h2>Speed Matters in Emerging Markets</h2>
+          <div class="l-tagline">"In fast-growing economies, speed can become a moat."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">When Jio launched in September 2016 with free voice calls and 4G data at nearly zero cost, the industry called it unsustainable. Vodafone, Airtel and Idea had years of infrastructure. But Jio had something they didn't — a completely new network, no legacy costs, and the willingness to bleed for market share.</p>
+      <p class="lesson-body-text">Within 6 months, Jio had 100 million subscribers. The speed of execution — from the scale of tower rollout to the simultaneous launch of apps — left incumbents flatfooted. By the time they responded, Jio had changed the cost structure of the entire industry.</p>
+      <div class="lesson-callout">
+        <p>In emerging markets, the first company to scale is rarely the best company — it's the most committed one. Speed removes the option of "wait and see" from everyone else.</p>
+        <cite>— First-Mover Discipline</cite>
+      </div>
+      <ul class="lesson-bullets">
+        <li>In high-growth markets, the cost of being late is higher than the cost of being imperfect</li>
+        <li>Move aggressively when the market is forming — constraints loosen later</li>
+        <li>Speed of execution builds organizational muscle; slow companies stay slow</li>
+        <li>Early scale creates data advantages that compound over time</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">First-Mover</span>
+        <span class="l-tag">Execution</span>
+        <span class="l-tag">Market Timing</span>
+        <span class="l-tag">Aggression</span>
+      </div>
+    </div>
+
+    <!-- LESSON 5 -->
+    <div class="lesson-full reveal" id="lesson-5">
+      <div class="lesson-header">
+        <div class="l-num">05</div>
+        <div>
+          <h2>Capital Is a Strategic Weapon</h2>
+          <div class="l-tagline">"Capital wasn't just funding. It was acceleration."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">In 2020, while the world was locked down, Reliance raised ₹1.52 lakh crore in under six months through stake sales to Facebook, Google, Silver Lake, KKR, and others. This wasn't desperation — it was strategy. Reliance used the capital to become debt-free and then accelerated its digital and retail buildout while competitors were cutting costs.</p>
+      <p class="lesson-body-text">Dhirubhai Ambani famously democratized equity investment in India by being the first company to run mass retail investor campaigns for Reliance IPO shares. He understood that access to patient capital, at scale, meant freedom to outspend competitors over long cycles.</p>
+      <div class="lesson-callout">
+        <p>The ability to raise capital — at the right terms, at the right time — is itself a competitive advantage. Not just financially, but as a signal to markets, to partners, and to employees that you're the winner to back.</p>
+        <cite>— Capital as Signal</cite>
+      </div>
+      <ul class="lesson-bullets">
+        <li>Build relationships with capital providers before you need them</li>
+        <li>Strategic partnerships can deliver capital + legitimacy + distribution simultaneously</li>
+        <li>The best time to raise capital is when you don't need it</li>
+        <li>Debt-free balance sheets give you optionality to move aggressively in downturns</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">Fundraising</span>
+        <span class="l-tag">Partnerships</span>
+        <span class="l-tag">Balance Sheet</span>
+        <span class="l-tag">Optionality</span>
+      </div>
+    </div>
+
+    <!-- LESSON 6 -->
+    <div class="lesson-full reveal" id="lesson-6">
+      <div class="lesson-header">
+        <div class="l-num">06</div>
+        <div>
+          <h2>Long-Term Thinking Changes Decisions</h2>
+          <div class="l-tagline">"That patience changed entire industries."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">Reliance has consistently made decisions that look painful in the short term but dominant in the long term. The petrochemical vertical integration was a 15-year project before it became highly profitable. Jio's free-data strategy destroyed margins for 2 years to kill off weak competitors.</p>
+      <p class="lesson-body-text">New Energy — Reliance's green hydrogen and solar play — is the same pattern. ₹75,000 crore invested in plants that won't be operational until the late 2020s. The logic isn't next quarter. It's next decade.</p>
+      <div class="lesson-callout">
+        <p>Most public companies are trapped in quarterly thinking by their investors. Reliance has always traded its own stock as a signal of long-term confidence — using the Ambani family's ownership concentration to insulate long-term decisions from short-term pressure.</p>
+        <cite>— Patient Capital at Work</cite>
+      </div>
+      <ul class="lesson-bullets">
+        <li>Ask: "Where will the market be in 10 years?" before "How do we grow this quarter?"</li>
+        <li>Be willing to destroy your own business model before a competitor does</li>
+        <li>Long-term thinking requires ownership structure that protects it — align incentives</li>
+        <li>Industry leadership is rarely won in one move; it's accumulated over many cycles</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">Vision</span>
+        <span class="l-tag">Patience</span>
+        <span class="l-tag">Strategic Planning</span>
+        <span class="l-tag">Industry Cycles</span>
+      </div>
+    </div>
+
+    <!-- LESSON 7 -->
+    <div class="lesson-full reveal" id="lesson-7">
+      <div class="lesson-header">
+        <div class="l-num">07</div>
+        <div>
+          <h2>The Biggest Companies Shape Behavior</h2>
+          <div class="l-tagline">"Businesses that shape behavior shape the future."</div>
+        </div>
+      </div>
+      <p class="lesson-body-text">Before Jio, the average Indian consumed 200MB of mobile data per month. After Jio, the average crossed 18GB — one of the highest in the world. Reliance didn't just capture a market. It created one by fundamentally changing how people behave.</p>
+      <p class="lesson-body-text">Reliance Retail changed where middle India shops. JioMart is changing how tier-2 and tier-3 city consumers buy groceries. New Energy is betting on changing how India powers itself. The pattern is consistent: don't enter a market to compete — enter to redefine it.</p>
+      <div class="lesson-callout">
+        <p>The most powerful companies in history — Ford, Amazon, Apple — didn't just build better products. They created new behavioral norms. When you change how people live, the company that caused that change becomes permanently embedded in those habits.</p>
+        <cite>— Behavioral Lock-In</cite>
+      </div>
+      <ul class="lesson-bullets">
+        <li>Ask: "What behavior change will we enable?" not just "What product will we sell?"</li>
+        <li>Companies that create new habits have durable advantages over those that serve existing ones</li>
+        <li>Behavioral change requires price disruption — make the new behavior too cheap to resist</li>
+        <li>Once a habit is formed at the infrastructure level, switching costs become cultural, not just financial</li>
+      </ul>
+      <div class="lesson-tags">
+        <span class="l-tag">Behavioral Economics</span>
+        <span class="l-tag">Habit Formation</span>
+        <span class="l-tag">Disruption</span>
+        <span class="l-tag">Market Creation</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--ink);text-align:center;padding:80px;">
+  <div class="section-label" style="color:var(--gold);justify-content:center;">Continue Exploring</div>
+  <h2 style="font-family:'Playfair Display',serif;color:var(--cream);font-size:2.5rem;margin-bottom:32px;">See How These Lessons<br>Play Out in Reality</h2>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="timeline.html" class="btn-primary">Reliance Timeline</a>
+    <a href="ecosystem.html" class="btn-outline" style="border-color:var(--cream);color:var(--cream);">Business Ecosystem</a>
+  </div>
+</section>
+
+<div id="footer-holder"></div>
+
+<script src="components.js"></script>
+<script>
+  // Reading progress
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    const fill = document.getElementById('progress');
+    if (fill) fill.style.width = (window.scrollY / total * 100) + '%';
+  });
+
+  // Highlight active lesson in subnav
+  const lessonSections = document.querySelectorAll('.lesson-full');
+  const subnavLinks = document.querySelectorAll('#lesson-subnav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    lessonSections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    subnavLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
