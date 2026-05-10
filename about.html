@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — eCoding India Season 2</title>
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <style>
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .profile-card {
+      background: var(--ink); padding: 48px 40px; position: sticky; top: 80px;
+    }
+    .profile-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--rust));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .profile-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--cream); font-weight: 900; margin-bottom: 6px; }
+    .profile-role { font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .profile-bio { font-size: 0.92rem; color: #888; line-height: 1.7; margin-bottom: 28px; }
+    .profile-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .p-tag { font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border: 1px solid #333; color: var(--muted); }
+
+    .series-roadmap { margin-top: 40px; }
+    .roadmap-item { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .roadmap-week { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--gold); width: 50px; flex-shrink: 0; }
+    .roadmap-info h4 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .roadmap-info p { font-size: 0.85rem; color: var(--muted); }
+    .roadmap-item.current { background: var(--cream); margin: 0 -20px; padding: 20px; }
+    .roadmap-item.current .roadmap-info h4 { color: var(--rust); }
+
+    .btech-section { background: var(--rust); padding: 80px; }
+    .btech-section .section-label { color: var(--cream); }
+    .btech-section .section-label::after { background: var(--cream); }
+    .btech-section h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--cream); margin-bottom: 20px; }
+    .btech-section p { color: rgba(245,240,232,0.8); font-size: 1rem; line-height: 1.8; max-width: 700px; margin-bottom: 16px; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; }
+    .skill-box { background: rgba(255,255,255,0.08); padding: 28px 24px; }
+    .skill-box h4 { color: var(--cream); font-size: 1rem; font-weight: 600; margin-bottom: 12px; }
+    .skill-box p { color: rgba(245,240,232,0.6); font-size: 0.88rem; line-height: 1.6; }
+    .skill-icon { font-size: 1.8rem; margin-bottom: 12px; }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .profile-card { position: static; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .btech-section { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div id="nav-holder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg">SERIES</div>
+  <div>
+    <div class="page-tag fade-up">eCoding India · Season 2</div>
+    <h1 class="page-title fade-up delay-1">About This<br><em>Series</em></h1>
+    <p class="page-sub fade-up delay-2">A structured deep-dive into India's most powerful businesses — built for BTech students, founders, and anyone serious about understanding what drives Indian business at scale.</p>
+  </div>
+</div>
+
+<section>
+  <div class="about-grid">
+
+    <div>
+      <div class="section-label">The Series</div>
+      <h2 class="section-title reveal">eCoding India's Most Powerful Businesses</h2>
+      <p class="section-desc reveal">Season 2 goes deeper. Each week, we pick one Indian business empire, spend 7 days breaking down its strategy, structure, lessons and numbers — and on Day 7 we synthesize the biggest takeaways.</p>
+
+      <div class="series-roadmap reveal">
+        <div class="roadmap-item current">
+          <div class="roadmap-week">W1</div>
+          <div class="roadmap-info">
+            <h4>✅ Reliance Industries — Complete</h4>
+            <p>Scale, ecosystem thinking, capital strategy, infrastructure moats and behavior change.</p>
+          </div>
+        </div>
+        <div class="roadmap-item reveal">
+          <div class="roadmap-week">W2</div>
+          <div class="roadmap-info">
+            <h4>🏢 Tata Group — Coming Up</h4>
+            <p>Trust, legacy, governance, global expansion, and the ethics of building a conglomerate.</p>
+          </div>
+        </div>
+        <div class="roadmap-item reveal">
+          <div class="roadmap-week">W3</div>
+          <div class="roadmap-info">
+            <h4>💎 Adani Group</h4>
+            <p>Infrastructure audacity, port-to-power vertical integration, and the debt question.</p>
+          </div>
+        </div>
+        <div class="roadmap-item reveal">
+          <div class="roadmap-week">W4</div>
+          <div class="roadmap-info">
+            <h4>💻 Infosys</h4>
+            <p>How India exported engineering talent, built a global IT industry, and navigated leadership transitions.</p>
+          </div>
+        </div>
+        <div class="roadmap-item reveal">
+          <div class="roadmap-week">W5</div>
+          <div class="roadmap-info">
+            <h4>🏦 HDFC Bank</h4>
+            <p>Building the gold standard of Indian banking — risk culture, retail growth, and the merger.</p>
+          </div>
+        </div>
+        <div class="roadmap-item reveal">
+          <div class="roadmap-week">W6</div>
+          <div class="roadmap-info">
+            <h4>🚀 Zepto / Meesho / Razorpay</h4>
+            <p>New India's startup giants — speed, unit economics, and category creation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-card reveal">
+      <div class="profile-avatar">EC</div>
+      <div class="profile-name">eCoding India</div>
+      <div class="profile-role">Season 2 · Business Analysis Series</div>
+      <div class="profile-bio">
+        A structured learning initiative exploring how India's biggest companies were built — the strategies, the systems, the decisions, and the lessons that apply to anyone building in tech, business or strategy today.
+      </div>
+      <div class="profile-bio">
+        Built for BTech students, founders, product managers and curious minds who want to understand business through first principles — not just case studies.
+      </div>
+      <div class="profile-tags">
+        <span class="p-tag">Business Strategy</span>
+        <span class="p-tag">Indian Economy</span>
+        <span class="p-tag">AI Systems</span>
+        <span class="p-tag">Product Thinking</span>
+        <span class="p-tag">BTech Learning</span>
+        <span class="p-tag">Founder Mindset</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BTECH RELEVANCE -->
+<div class="btech-section">
+  <div class="section-label">Why This Matters for BTech Students</div>
+  <h2>Business Strategy Is a Technical Skill</h2>
+  <p>Engineers are trained to solve defined problems. But the most impactful engineers — the ones who build companies, lead products, or drive strategy — understand the business system around the code they write.</p>
+  <p>Studying Reliance isn't just studying business. It's studying systems thinking, infrastructure design, network effects, data moats, and capital allocation — all frameworks directly applicable to building technology products.</p>
+
+  <div class="skills-grid">
+    <div class="skill-box reveal">
+      <div class="skill-icon">🧠</div>
+      <h4>Systems Thinking</h4>
+      <p>How does one decision ripple through an entire ecosystem? Reliance is a masterclass in thinking across multiple levels simultaneously.</p>
+    </div>
+    <div class="skill-box reveal" style="transition-delay:.1s">
+      <div class="skill-icon">📊</div>
+      <h4>Business Model Analysis</h4>
+      <p>Revenue streams, moats, competitive positioning, unit economics — these are as important as architecture decisions in software.</p>
+    </div>
+    <div class="skill-box reveal" style="transition-delay:.2s">
+      <div class="skill-icon">⚡</div>
+      <h4>Product Strategy</h4>
+      <p>Jio's launch strategy is one of the most instructive product launches in history. Pricing, timing, distribution — all of it.</p>
+    </div>
+    <div class="skill-box reveal" style="transition-delay:.3s">
+      <div class="skill-icon">🌐</div>
+      <h4>Network Effects</h4>
+      <p>Understanding how platforms grow and why incumbents fail to compete with new entrants — essential for any tech product builder.</p>
+    </div>
+    <div class="skill-box reveal" style="transition-delay:.35s">
+      <div class="skill-icon">💰</div>
+      <h4>Capital Efficiency</h4>
+      <p>How companies raise, allocate and deploy capital is the difference between companies that survive and those that dominate.</p>
+    </div>
+    <div class="skill-box reveal" style="transition-delay:.4s">
+      <div class="skill-icon">🔮</div>
+      <h4>Long-Term Thinking</h4>
+      <p>Building with a 10-year horizon instead of a 10-week sprint changes every decision — from architecture to team structure.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="text-align:center;padding:80px;">
+  <h2 class="section-title reveal" style="margin:0 auto;text-align:center;">Ready to Go Deeper?</h2>
+  <p style="color:var(--muted);margin:16px auto 40px;max-width:500px;line-height:1.8;">Explore the 7 lessons, the 50-year timeline, or the full business ecosystem breakdown.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="lessons.html" class="btn-primary">7 Core Lessons</a>
+    <a href="timeline.html" class="btn-outline">View Timeline</a>
+    <a href="ecosystem.html" class="btn-outline">Business Ecosystem</a>
+  </div>
+</section>
+
+<div id="footer-holder"></div>
+<script src="components.js"></script>
+</body>
+</html>
